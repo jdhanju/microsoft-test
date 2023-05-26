@@ -1,5 +1,7 @@
 import './App.css';
 import FileUploadComponent from './Components/FileUpload';
+import TreeTextComponent from './Components/TreeText';
+import OutputField from './Components/Output';
 
 function App() {
   return (
@@ -9,6 +11,8 @@ function App() {
       </header>
       <h3>Upload your array tree here!</h3>
       <FileUploadComponent />
+      <TreeTextComponent />
+      <OutputField />
     </div>
   );
 }
