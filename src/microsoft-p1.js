@@ -4,8 +4,6 @@ function parseArrayToBinaryTree(arr) {
       id: nodeArr[0],
       left: null,
       right: null
-      //...(nodeArr.length > 1 ? {left: null}: {}),
-      //...(nodeArr.length > 1 ? {left: null}: {}),
     };
 
     if (nodeArr[1]) {

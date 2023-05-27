@@ -13,7 +13,7 @@ const FileUploadComponent = () => {
 
   const handleFileUpload = () => {
     // Perform upload logic here using selectedFile
-    console.log(selectedFile);
+    //console.log(selectedFile);
 
     //load file
     if (selectedFile) {

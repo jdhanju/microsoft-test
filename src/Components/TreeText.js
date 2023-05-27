@@ -8,7 +8,7 @@ const TreeTextComponent = () => {
  
     if(fileContent !== ''){
         treeJSON = JSON.stringify(parseArrayToBinaryTree(fileContent), null, 2);
-        console.log(treeJSON);
+        //console.log(treeJSON);
     }
 
     return (
