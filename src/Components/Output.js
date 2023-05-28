@@ -12,7 +12,7 @@ const OutputField = () => {
     if(fileContent !== ''){
         treeData = fileContent
         borderNode = findSmallestSubtreeWithDeepestNodes(treeData);
-        console.log(borderNode);
+        console.log(treeData);
         console.log(JSON.stringify(borderNode, null, 2));
     }
 
