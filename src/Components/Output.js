@@ -6,9 +6,6 @@ import findSmallestSubtreeWithDeepestNodes from "../SmallestSubTree";
 const OutputField = () => {
     const fileContent = useSelector((state) => state.fileContent);
     let treeData = null;
-    //console.log(fileContent);
-    //treeData = parseArrayToBinaryTree(fileContent);
-
     let borderNode = {};
 
     //only set these variables if the user has uploaded a valid JSON file
@@ -19,7 +16,6 @@ const OutputField = () => {
         console.log(JSON.stringify(borderNode, null, 2));
     }
 
-    //console.log(treeData);
 
     return(
         <div className="output">

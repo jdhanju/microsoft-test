@@ -12,13 +12,6 @@ const TreeTextComponent = () => {
     //get data from redux store
     const dispatch = useDispatch();
     const fileContent = useSelector((state) => state.fileContent);
-    //console.log(fileContent);
-    // let treeJSON = '';
- 
-    // if(fileContent !== ''){
-    //     treeJSON = JSON.stringify(fileContent, null, 2);
-    //     //console.log(treeJSON);
-    // }
 
     useEffect(() => {
         if(fileContent !== ''){
@@ -30,12 +23,10 @@ const TreeTextComponent = () => {
 
 
     const handleTextFieldChange  = (event) => {
-        //event.target.defaultValue
         try{
             setJsonError(false); //removes JSON error message
 
             //update redux store to new change
-            //console.log(event.target.value);
            setTreeJSON(JSON.parse(event.target.value));
            console.log(treeJSON)
            dispatch(setFileContent(JSON.parse(event.target.value)));
@@ -57,7 +48,6 @@ const TreeTextComponent = () => {
           id="textArea"
           name="text"
           onChange={(event) => handleTextFieldChange(event)}
-        //   defaultValue={treeJSON}
           style={{width:"30%", height:"75%"}}
         />
 
