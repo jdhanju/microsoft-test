@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { setFileContent } from '../store';
+import parseArrayToBinaryTree from '../microsoft-p1.js';
 
 const FileUploadComponent = () => {
   const [selectedFile, setSelectedFile] = useState(null);
@@ -21,10 +22,11 @@ const FileUploadComponent = () => {
 
       reader.onload = (event) => {
         const fileContent = event.target.result;
-        console.log(fileContent);
-        dispatch(setFileContent(JSON.parse(fileContent)));
+        //console.log(fileContent);
         try {
           //console.log(JSON.parse(fileContent.toString()));
+          //console.log(parseArrayToBinaryTree(fileContent));
+          dispatch(setFileContent(parseArrayToBinaryTree(JSON.parse(fileContent.toString()))));
           setJsonError(false);
         } catch (e) {
           console.log("error!")
@@ -38,11 +40,11 @@ const FileUploadComponent = () => {
 
   return (
     <div>
-      <input type="file" onChange={handleFileChange} />
+      <input type="file" accept=".json, .txt" onChange={handleFileChange} />
       <button onClick={handleFileUpload}>Fetch</button>
       {/* Only show this error message if we have an incorrect json file */}
       {jsonError ? 
-      <p id="error">Invalid JSON Format</p>
+      <p className="error" id="textError">Invalid JSON Format</p>
        : null}
     </div>
   );

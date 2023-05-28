@@ -18,9 +18,11 @@
   color: #61dafb;
 }
 
-#error{
+.error{
   color:red;
+  margin: auto;
 }
+
 
 .treeText{
   height: 300px;
@@ -41,7 +43,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 60vh;
 }
 
 .node {

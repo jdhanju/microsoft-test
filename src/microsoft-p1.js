@@ -16,6 +16,8 @@ function parseArrayToBinaryTree(arr) {
 
     return node;
   };
+
+
   return parseNode(arr);
 }
 
