@@ -18,9 +18,9 @@ const BinaryTreeNode = ({ node, borderNodeID }) => {
     const nodePosition = parentPosition === 'left' ? 'left' : 'right';
 
     return (
-      <div>
+      <div className='mainNodeDiv'>
         <div className={borderNodeID === id? "node-with-border" : "node"} >
-          <div className={`node ${nodePosition}`}>
+          <div className={`node ${nodePosition}`} id={borderNodeID === id? "node-with-border" : "node"}>
             <div className="node-id">{id}</div>
             <div className="node-children">
               {renderTree(left, 'left')}

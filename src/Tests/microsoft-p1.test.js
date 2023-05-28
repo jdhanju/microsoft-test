@@ -74,4 +74,22 @@ describe('parseArrayToBinaryTree', () => {
 
     expect(output).toEqual(expectedOutput);
   });
+
+  it('handle an empty array', ()=> {
+    const input = [];
+    const expectedOutput = {};
+
+    const output = parseArrayToBinaryTree(input);
+
+    expect(output).toEqual(expectedOutput);
+  })
+
+  it('handle array with null', ()=> {
+    const input = [null];
+    const expectedOutput = {id: null};
+
+    const output = parseArrayToBinaryTree(input);
+
+    expect(output).toEqual(expectedOutput);
+  })
 });

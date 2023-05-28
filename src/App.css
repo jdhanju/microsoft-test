@@ -79,6 +79,6 @@
   display: flex;
 } 
 
-.node-with-border{
+#node-with-border{
   border: 2px solid green;
 }
