@@ -1,23 +1,32 @@
 import { useSelector } from 'react-redux';
-import parseArrayToBinaryTree from '../microsoft-p1.js';
 import { useDispatch } from 'react-redux';
 import { setFileContent } from '../store';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 
 
 const TreeTextComponent = () => {
     //displays JSON error message
     const [jsonError,setJsonError] = useState(false);
+    const [treeJSON, setTreeJSON] = useState('');
     //get data from redux store
     const dispatch = useDispatch();
     const fileContent = useSelector((state) => state.fileContent);
-    let treeJSON = '';
+    //console.log(fileContent);
+    // let treeJSON = '';
  
-    if(fileContent !== ''){
-        treeJSON = JSON.stringify(fileContent, null, 2);
-        //console.log(treeJSON);
-    }
+    // if(fileContent !== ''){
+    //     treeJSON = JSON.stringify(fileContent, null, 2);
+    //     //console.log(treeJSON);
+    // }
+
+    useEffect(() => {
+        if(fileContent !== ''){
+            setTreeJSON(JSON.stringify(fileContent, null, 2));
+            document.getElementById("textArea").value = JSON.stringify(fileContent, null, 2);
+        }
+
+    }, [fileContent])
 
 
     const handleTextFieldChange  = (event) => {
@@ -27,9 +36,9 @@ const TreeTextComponent = () => {
 
             //update redux store to new change
             //console.log(event.target.value);
-           const editedJSON = JSON.parse(event.target.value);
-           console.log(editedJSON)
-           dispatch(setFileContent(editedJSON));
+           setTreeJSON(JSON.parse(event.target.value));
+           console.log(treeJSON)
+           dispatch(setFileContent(JSON.parse(event.target.value)));
     
         } catch(e){
             //edited JSON is not valid JSON
@@ -45,9 +54,10 @@ const TreeTextComponent = () => {
         <h3>Tree Text</h3>
         <textarea
           className="text-field"
+          id="textArea"
           name="text"
           onChange={(event) => handleTextFieldChange(event)}
-          defaultValue={treeJSON}
+        //   defaultValue={treeJSON}
           style={{width:"30%", height:"75%"}}
         />
 

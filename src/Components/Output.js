@@ -1,28 +1,32 @@
 import { useSelector } from 'react-redux';
-import parseArrayToBinaryTree from '../microsoft-p1.js';
 import BinaryTreeNode from './BinaryTreeNode';
-
-
+import findSmallestSubtreeWithDeepestNodes from "../SmallestSubTree";
 
 
 const OutputField = () => {
     const fileContent = useSelector((state) => state.fileContent);
     let treeData = null;
-    console.log(fileContent);
+    //console.log(fileContent);
     //treeData = parseArrayToBinaryTree(fileContent);
 
+    let borderNode = {};
+
+    //only set these variables if the user has uploaded a valid JSON file
     if(fileContent !== ''){
         treeData = fileContent
+        borderNode = findSmallestSubtreeWithDeepestNodes(treeData);
+        console.log(borderNode);
+        console.log(JSON.stringify(borderNode, null, 2));
     }
 
-    console.log(fileContent);
+    //console.log(treeData);
 
     return(
         <div className="output">
             <div className="innerWrapper">
                 <h3>Output</h3>
                 <div className="binary-tree">
-                    <BinaryTreeNode node={treeData} />
+                    <BinaryTreeNode node={treeData} borderNodeID={borderNode.id} />
                 </div>
             </div>
         </div>

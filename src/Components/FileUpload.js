@@ -12,9 +12,8 @@ const FileUploadComponent = () => {
     setSelectedFile(event.target.files[0]);
   };
 
-  const handleFileUpload = () => {
+  const handleFileUpload = (e) => { 
     // Perform upload logic here using selectedFile
-    //console.log(selectedFile);
 
     //load file
     if (selectedFile) {
@@ -25,11 +24,11 @@ const FileUploadComponent = () => {
         //console.log(fileContent);
         try {
           //console.log(JSON.parse(fileContent.toString()));
-          //console.log(parseArrayToBinaryTree(fileContent));
+          console.log(parseArrayToBinaryTree(JSON.parse(fileContent.toString())));
           dispatch(setFileContent(parseArrayToBinaryTree(JSON.parse(fileContent.toString()))));
           setJsonError(false);
         } catch (e) {
-          console.log("error!")
+          console.log(e)
           setJsonError(!jsonError);
         }
       };

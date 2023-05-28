@@ -69,3 +69,7 @@
 .node-children {
   display: flex;
 }
+
+.node-with-border{
+  border: 2px solid green;
+}
