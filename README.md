@@ -1,4 +1,4 @@
-# MicroSoft Screening Problem
+# Microsoft Screening Problem
 
 
 ## How to run?
