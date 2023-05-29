@@ -22,7 +22,7 @@ const OutputField = () => {
             <div className="innerWrapper">
                 <h3>Output</h3>
                 <div className="binary-tree">
-                    <BinaryTreeNode node={treeData} borderNodeID={borderNode.id} />
+                    {treeData ? <BinaryTreeNode node={treeData} borderNodeID={borderNode.id} /> : null}
                 </div>
             </div>
         </div>
