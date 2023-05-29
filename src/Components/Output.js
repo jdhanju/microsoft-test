@@ -9,7 +9,7 @@ const OutputField = () => {
     let borderNode = {};
 
     //only set these variables if the user has uploaded a valid JSON file
-    if(fileContent !== ''){
+    if (fileContent !== '') {
         treeData = fileContent
         borderNode = findSmallestSubtreeWithDeepestNodes(treeData);
         console.log(treeData);
@@ -17,7 +17,7 @@ const OutputField = () => {
     }
 
 
-    return(
+    return (
         <div className="output">
             <div className="innerWrapper">
                 <h3>Output</h3>

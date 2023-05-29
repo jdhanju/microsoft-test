@@ -18,24 +18,24 @@
   color: #61dafb;
 }
 
-.error{
-  color:red;
+.error {
+  color: red;
   margin: auto;
 }
 
 
-.treeText{
+.treeText {
   height: 300px;
 }
 
-.output{
+.output {
   display: flex;
   flex-direction: column;
   min-height: 100%;
   background-color: lightblue;
 }
 
-.innerWrapper{
+.innerWrapper {
   height: 100vh;
 }
 
@@ -79,13 +79,13 @@
 .node-children {
   display: flex;
   margin: 5px;
-} 
+}
 
-.node-parent{
+.node-parent {
   border: 1px solid orange;
   margin: 10px;
 }
 
-#node-with-border{
+#node-with-border {
   border: 2px solid green;
 }
