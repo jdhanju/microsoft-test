@@ -33,3 +33,17 @@
 - Blue boxes represent a whole tree/subtree
 - You can edit the text box, and see live changes to the visual output
 - No live changes will occur if the JSON is invalid
+
+## Problem 3 solution
+
+### Assumptions I made
+- Each node in the binary tree has an id property, and left and right properties representing
+its left and right child nodes.
+- The id property in each node is unique within the binary tree.
+- The goal is to find the smallest subtree that contains all the deepest nodes. If multiple nodes whose depths are equal to the max tree depth, then the solution is the smallest subtree containing all those deepest nodes.
+
+### Engineering Tradeoffs
+- Recursive approach: The solution provided uses a recursive approach to traverse the tree and find the depth of each node. This approach is intuitive and easy to implement, but it may have limitations in handling very large trees, as it relies on the call stack.
+- The time complexity of my solution is dependent on the size of the binary tree. It needs to traverse the entire tree. In the worst case scenario, where the binary tree is skewed, the time complexity would be O(n), where n is the number of nodes in the tree.
+- Output Structure: The solution returns the smallest subtree that contains all the deepest nodes. It includes the complete subtree structure from the root down to the deepest nodes. However, if multiple subtrees satisfy the condition, the solution may return any one of those subtrees.
+
