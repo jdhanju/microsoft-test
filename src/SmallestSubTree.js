@@ -4,7 +4,7 @@ function findSmallestSubtreeWithDeepestNodes(root) {
         if (!node) {
             return 0;
         }
-
+        //recursively finds the deepest node in a DFS pattern
         return Math.max(findDepth(node.left), findDepth(node.right)) + 1;
     };
 
@@ -14,6 +14,7 @@ function findSmallestSubtreeWithDeepestNodes(root) {
             return null;
         }
 
+        //we have reached maximum depth of the tree
         if (depth === 1) {
             return node;
         }
@@ -21,6 +22,8 @@ function findSmallestSubtreeWithDeepestNodes(root) {
         const leftDepth = findDepth(node.left);
         const rightDepth = findDepth(node.right);
 
+        //The current node is part of the smallest subtree containing
+        //all the deepest nodes
         if (leftDepth === rightDepth && leftDepth === depth - 1) {
             return node;
         }
