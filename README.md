@@ -10,7 +10,7 @@
 
 ## Where is my Problem 1 file?
 - `microsoft-test/src/microsoft-p1.js`
-- If you would like to test problem 1 separately I have set up a different folder where you can execute problem 1 with node.js
+- If you would like to test problem-1 separately I have set up a different folder where you can execute problem 1 with node.js
 - Go to the `node` directory
 - Run `node microsoft-p1-node` to run your test cases.
 - Lines 31-37 in the file `microsoft-p1-node.js` execute my tests. You can go ahead and comment them out or replace them.
@@ -28,3 +28,8 @@
 - The uploaded file data will be parsed and displayed in the text box
 - If the file contains invalid JSON then an error message will appear
 - Scroll down to view the visual output
+- The node that has a green box is the smallest subtree with all the deepest nodes
+- Orange boxes are a nodes children
+- Blue boxes represent a whole tree/subtree
+- You can edit the text box, and see live changes to the visual output
+- No live changes will occur if the JSON is invalid
