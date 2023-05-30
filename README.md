@@ -1,5 +1,7 @@
 # Microsoft Screening Problem
 
+## Tech Stack
+- React, Javascript, CSS, Jest, and Redux
 
 ## How to run?
 - Go inside the microsoft-test folder
@@ -65,9 +67,9 @@ its left and right child nodes.
 
  - I would have tried to not use recursion in this project. I used it in files like SmallestSubTree.js because it made the solution a lot easier. But the downside is scalability. If we have a very large binary tree then the call stack may overflow.
 
-- I would have liked to keep everything on a single page, and not make my application scrollable. I ended up making the output section larger because I wanted out output to be easy to read. If I had the extra time I would have spent more time trying to get everything to fit on a single page, but still look nice, and be very readable.
+- I would have liked to keep everything on a single page, and not make my application scrollable. I ended up making the output section larger because I wanted the output to be easy to read. If I had the extra time I would have spent more time trying to get everything to fit on a single page, but still look nice, and be very readable.
 
-- I did create some unit tests, but I would have liked to add more, and test every component.
+- I did create some unit tests, but I would have liked to add more, and test every React component.
 
 ### Fun extras I added
 - Users are limited to uploading .json and .txt files
