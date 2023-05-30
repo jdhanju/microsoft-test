@@ -29,7 +29,7 @@
 - If the file contains invalid JSON then an error message will appear
 - Scroll down to view the visual output
 - The node that has a green box is the smallest subtree with all the deepest nodes
-- Orange boxes are a nodes children
+- Orange boxes are a node's child
 - Blue boxes represent a whole tree/subtree
 - You can edit the text box, and see live changes to the visual output
 - No live changes will occur if the JSON is invalid
@@ -37,14 +37,14 @@
 ## Problem 3 solution
 
 ### Assumptions I made
-- Each node in the binary tree has an id property, and left and right properties representing
+- Each node in the binary tree has an id property and left and right properties representing
 its left and right child nodes.
 - The id property in each node is unique within the binary tree.
 - The goal is to find the smallest subtree that contains all the deepest nodes. If multiple nodes whose depths are equal to the max tree depth, then the solution is the smallest subtree containing all those deepest nodes.
 
 ### Engineering Tradeoffs
 - Recursive approach: The solution provided uses a recursive approach to traverse the tree and find the depth of each node. This approach is intuitive and easy to implement, but it may have limitations in handling very large trees, as it relies on the call stack.
-- The time complexity of my solution is dependent on the size of the binary tree. It needs to traverse the entire tree. In the worst case scenario, where the binary tree is skewed, the time complexity would be O(n), where n is the number of nodes in the tree.
+- The time complexity of my solution is dependent on the size of the binary tree. It needs to traverse the entire tree. In the worst-case scenario, where the binary tree is skewed, the time complexity would be O(n), where n is the number of nodes in the tree.
 - Output Structure: The solution returns the smallest subtree that contains all the deepest nodes. It includes the complete subtree structure from the root down to the deepest nodes. However, if multiple subtrees satisfy the condition, the solution may return any one of those subtrees.
 
 ### Algorithm
@@ -56,20 +56,20 @@ its left and right child nodes.
 - If the left and right subtrees have equal depths and both depths are equal to depth - 1, it means that the current node is part of the smallest subtree containing all the deepest nodes. So return the current node.
 - If the depth of the left subtree is greater than or equal to the depth of the right subtree, the function recursively calls itself on the left subtree with depth - 1.
 - Otherwise, if the depth of the right subtree is greater, the function recursively calls itself on the right subtree with depth - 1.
-- First run the findDepth function to find the maximum depth of the tree. Use the result to run the function findSmallestSubtree to find the smallest subtree with all the deepest nodes.
+- First, run the findDepth function to find the maximum depth of the tree. Use the result to run the function findSmallestSubtree to find the smallest subtree with all the deepest nodes.
 
 ## Bonus
 
  ### What would I have done differently?
- - In my project I used Redux for state management. If I had the time I would have learned how to use the React hook useContext, and try to use taht for state management instead. It may have been better to use a built in React feature rather than importing a library.
+ - In my project, I used Redux for state management. If I had the time I would have learned how to use the React hook useContext, and try to use that for state management instead. It may have been better to use a built-in React feature rather than importing a library.
 
  - I would have tried to not use recursion in this project. I used it in files like SmallestSubTree.js because it made the solution a lot easier. But the downside is scalability. If we have a very large binary tree then the call stack may overflow.
 
-- I would have like to keep everything on a single page, and not make my application scrollable. I ended up making the output section larger because I wanted out output to be easy to read. If I had the extra time I would have spent more time trying to get everything to fit on a single page, but still look nice, and be very readable.
+- I would have liked to keep everything on a single page, and not make my application scrollable. I ended up making the output section larger because I wanted out output to be easy to read. If I had the extra time I would have spent more time trying to get everything to fit on a single page, but still look nice, and be very readable.
 
-- I did create some unit tests, but I would have like to add more, and also test every component as well.
+- I did create some unit tests, but I would have liked to add more, and test every component.
 
 ### Fun extras I added
 - Users are limited to uploading .json and .txt files
-- A .json file and .txt file won't be uploaded if it contains invalid json
+- A .json file and .txt file won't be uploaded if it contains invalid JSON
 - I added unit tests with jest. Look inside the `microsoft-test/src/Tests`
