@@ -29,7 +29,7 @@
 - If the file contains invalid JSON then an error message will appear
 - Scroll down to view the visual output
 - The node that has a green box is the smallest subtree with all the deepest nodes
-- Orange boxes are a node's child
+- Orange boxes are a node's children
 - Blue boxes represent a whole tree/subtree
 - You can edit the text box, and see live changes to the visual output
 - No live changes will occur if the JSON is invalid
