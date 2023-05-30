@@ -47,6 +47,17 @@ its left and right child nodes.
 - The time complexity of my solution is dependent on the size of the binary tree. It needs to traverse the entire tree. In the worst case scenario, where the binary tree is skewed, the time complexity would be O(n), where n is the number of nodes in the tree.
 - Output Structure: The solution returns the smallest subtree that contains all the deepest nodes. It includes the complete subtree structure from the root down to the deepest nodes. However, if multiple subtrees satisfy the condition, the solution may return any one of those subtrees.
 
+### Algorithm
+- The FirstDepth function is a helper function that finds the depth of a given node in a binary tree
+- The findSmallestSubtree helper function finds the smallest subtree containing all the deepest nodes. It takes two parameters: the current node being processed and the depth of the current node. 
+- If the current node is null, meaning it has no child nodes, the function returns null.
+- If the depth is 1, meaning we have reached the maximum depth of the tree, the function returns the current node.
+- Next, calculate the depth of the left and right subtrees of the current node using the findDepth function.
+- If the left and right subtrees have equal depths and both depths are equal to depth - 1, it means that the current node is part of the smallest subtree containing all the deepest nodes. So return the current node.
+- If the depth of the left subtree is greater than or equal to the depth of the right subtree, the function recursively calls itself on the left subtree with depth - 1.
+- Otherwise, if the depth of the right subtree is greater, the function recursively calls itself on the right subtree with depth - 1.
+- First run the findDepth function to find the maximum depth of the tree. Use the result to run the function findSmallestSubtree to find the smallest subtree with all the deepest nodes.
+
 ## Bonus
 
  ### What would I have done differently?
@@ -56,5 +67,9 @@ its left and right child nodes.
 
 - I would have like to keep everything on a single page, and not make my application scrollable. I ended up making the output section larger because I wanted out output to be easy to read. If I had the extra time I would have spent more time trying to get everything to fit on a single page, but still look nice, and be very readable.
 
+- I did create some unit tests, but I would have like to add more, and also test every component as well.
 
-
+### Fun extras I added
+- Users are limited to uploading .json and .txt files
+- A .json file and .txt file won't be uploaded if it contains invalid json
+- I added unit tests with jest. Look inside the `microsoft-test/src/Tests`
