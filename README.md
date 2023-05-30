@@ -12,7 +12,7 @@
 - `microsoft-test/src/microsoft-p1.js`
 - If you would like to test problem-1 separately I have set up a different folder where you can execute problem 1 with node.js
 - Go to the `node` directory
-- Run `node microsoft-p1-node` to run your test cases.
+- Run the command `node microsoft-p1-node` to run your test cases.
 - Lines 31-37 in the file `microsoft-p1-node.js` execute my tests. You can go ahead and comment them out or replace them.
 
 ## How to run problems 2 and 3
