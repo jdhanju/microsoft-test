@@ -76,3 +76,14 @@ its left and right child nodes.
 - Users are limited to uploading .json and .txt files
 - A .json file and .txt file won't be uploaded if it contains invalid JSON
 - I added unit tests with jest. Look inside the `microsoft-test/src/Tests`
+
+## Screenshots
+
+- Small input file
+
+![sc1](./images/sc1.png)
+![sc1](./images/sc2.png)
+![sc1](./images/sc3.png)
+![sc1](./images/sc4.png)
+![sc1](./images/sc5.png)
+![sc1](./images/sc6.png)
