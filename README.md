@@ -5,6 +5,7 @@
 
 ## How to run?
 - Go inside the microsoft-test folder
+- Run the command `npm i` to install dependencies
 - Run the command `npm start`
 
 ## How to run unit tests?
