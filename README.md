@@ -83,12 +83,20 @@ its left and right child nodes.
 
 ![sc1](./images/sc1.png)
 <br />
+<br />
 ![sc1](./images/sc2.png)
+- large input file
+<br />
 <br />
 ![sc1](./images/sc3.png)
 <br />
+<br />
 ![sc1](./images/sc4.png)
 <br />
+<br />
+- Invalid JSON while editing the text box
 ![sc1](./images/sc5.png)
 <br />
+<br />
+- Invalid JSON from a file you are trying to upload
 ![sc1](./images/sc6.png)
