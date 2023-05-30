@@ -47,3 +47,14 @@ its left and right child nodes.
 - The time complexity of my solution is dependent on the size of the binary tree. It needs to traverse the entire tree. In the worst case scenario, where the binary tree is skewed, the time complexity would be O(n), where n is the number of nodes in the tree.
 - Output Structure: The solution returns the smallest subtree that contains all the deepest nodes. It includes the complete subtree structure from the root down to the deepest nodes. However, if multiple subtrees satisfy the condition, the solution may return any one of those subtrees.
 
+## Bonus
+
+ ### What would I have done differently?
+ - In my project I used Redux for state management. If I had the time I would have learned how to use the React hook useContext, and try to use taht for state management instead. It may have been better to use a built in React feature rather than importing a library.
+
+ - I would have tried to not use recursion in this project. I used it in files like SmallestSubTree.js because it made the solution a lot easier. But the downside is scalability. If we have a very large binary tree then the call stack may overflow.
+
+- I would have like to keep everything on a single page, and not make my application scrollable. I ended up making the output section larger because I wanted out output to be easy to read. If I had the extra time I would have spent more time trying to get everything to fit on a single page, but still look nice, and be very readable.
+
+
+
