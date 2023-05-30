@@ -86,9 +86,9 @@ its left and right child nodes.
 <br />
 
 ![sc1](./images/sc2.png)
+<br />
+<br />
 - large input file
-<br />
-<br />
 
 ![sc1](./images/sc3.png)
 <br />
