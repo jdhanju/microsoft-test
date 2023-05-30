@@ -55,8 +55,8 @@ its left and right child nodes.
 - Next, calculate the depth of the left and right subtrees of the current node using the findDepth function.
 - If the left and right subtrees have equal depths and both depths are equal to depth - 1, it means that the current node is part of the smallest subtree containing all the deepest nodes. So return the current node.
 - If the depth of the left subtree is greater than or equal to the depth of the right subtree, the function recursively calls itself on the left subtree with depth - 1.
-- Otherwise, if the depth of the right subtree is greater, the function recursively calls itself on the right subtree with depth - 1.
-- First, run the findDepth function to find the maximum depth of the tree. Use the result to run the function findSmallestSubtree to find the smallest subtree with all the deepest nodes.
+- Otherwise, if the depth of the right subtree is greater than the depth of the left subtree, the function recursively calls itself on the right subtree with depth - 1.
+- Run the findDepth function to find the maximum depth of the tree. Use the result to run the function findSmallestSubtree to find the smallest subtree with all the deepest nodes.
 
 ## Bonus
 
