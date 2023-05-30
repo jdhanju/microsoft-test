@@ -82,8 +82,13 @@ its left and right child nodes.
 - Small input file
 
 ![sc1](./images/sc1.png)
+<br />
 ![sc1](./images/sc2.png)
+<br />
 ![sc1](./images/sc3.png)
+<br />
 ![sc1](./images/sc4.png)
+<br />
 ![sc1](./images/sc5.png)
+<br />
 ![sc1](./images/sc6.png)
